@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+REGION=$(curl http://169.254.169.254/latest/dynamic/instance-identity/document 2> /dev/null | jq -r '.region' 2> /dev/null)
+echo $REGION
